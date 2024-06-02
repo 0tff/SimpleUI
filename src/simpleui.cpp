@@ -87,7 +87,7 @@ BOOL RegisterWindowClass(const char* wClassName) {
     nClass.hIcon = LoadIcon(NULL, IDI_APPLICATION); 
     nClass.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
     nClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-    nClass.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH); // Set background to black
+    nClass.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH); // Set background to a ninja xd
     nClass.lpszMenuName = "what";
     nClass.lpszClassName = wClassName;
 
@@ -144,7 +144,7 @@ BOOL CreateWindowMenu() {
 
     HMENU mainDropdown = CreatePopupMenu();
     AppendMenu(mainDropdown, MF_STRING, MALX_EXIT, "Exit");
-    AppendMenu(WindowMenu, MF_POPUP, (UINT_PTR)mainDropdown, "Sevenv2");
+    AppendMenu(WindowMenu, MF_POPUP, (UINT_PTR)mainDropdown, " SimpleUi");
 
     HMENU aboutDropdown = CreatePopupMenu();
     AppendMenu(aboutDropdown, MF_STRING, MALX_CREDITS, "Credits");
@@ -161,7 +161,7 @@ BOOL InitiateWindow() {
     RegisterWindowClass("ALX_WINDOW");
 
     char alxName[50];
-    _snprintf_s(alxName, 50, "Seven v2");
+    _snprintf_s(alxName, 50, " SimpleUI  Toasty and 0tff");
 
     if (!CreateWindowMenu())
         return 0;
